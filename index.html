@@ -1,1 +1,75 @@
-<!DOCTYPE html><html><head><title>My GitHub Page</title></head><body><h1>Hello, World!</h1><p>Welcome to my GitHub page. This is a simple GitHub Pages site.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammy Guo - HCI Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src=logo.jpeg alt="Sammy Guo" class="profile-image">
+        <h1>Sammy Guo</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#writing">Writing</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <section id="about" class="full-page-section">
+            <h2>Hello!</h2>
+<div class="about-section">
+    <p>Hello, I'm Sammy, a junior at Michigan State University's Honors College studying Computer Science, with a minor in Entrepreneurship and Innovation. Currently, I am expanding my skills and global perspective through a study abroad program at Hong Kong University of Science and Technology.</p>
+    
+    <p>Professionally, my experience includes a Product Management Internship at Comcast NBC Universal. I am eagerly anticipating my next role as a Software Engineering Intern at Wells Fargo, where I plan to further my abilities in creating impactful technology solutions.</p>
+    
+    <p>My passion lies in making technology accessible to all, with particular interests in product management, software development, and human-computer interaction design. I strive to blend innovative design with practical applications to meet diverse user needs.</p>
+</div>
+        </section>
+        <section id="portfolio" class="full-page-section">
+            <h2>Portfolio</h2>
+            <p>Examples of work and projects that Sammy has completed.</p>
+        </section>
+        <section id="writing" class="full-page-section">
+            <h2>Writing</h2>
+            <p>Insights and articles written by Sammy on topics in design and technology.</p>
+        </section>
+    </div>
+</body>
+<div class="sidebar">
+    <img src=logo.jpeg alt="Sammy Guo" class="profile-image">
+    <h1>Sammy Guo</h1>
+    <nav>
+        <ul>
+            <li><a href="#about" id="link-about">About</a></li>
+            <li><a href="#portfolio" id="link-portfolio">Portfolio</a></li>
+            <li><a href="#writing" id="link-writing">Writing</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    const activeId = 'link-' + entry.target.id;
+                    document.getElementById(activeId).classList.add('active');
+                }
+            });
+        }, {
+            rootMargin: '-50% 0px -50% 0px'
+        });
+    
+        document.querySelectorAll('.main-content section').forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
+
