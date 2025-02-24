@@ -56,6 +56,7 @@ body, html {
     width: calc(100% - 250px); 
     display: flex;
     flex-direction: column;
+
 }
 
 .full-page-section {
@@ -64,23 +65,28 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
 }
 
 #about {
-    background-color: #000000; 
+    background-color: #77da9a; 
     color: #ffffff;
 }
 
-#portfolio {
-    background-color: #808080; 
+#Project_1 {
+    background-color: #b1d6be; 
     color: #ffffff;
 }
 
-#writing {
-    background-color: #D3D3D3; 
-    color: #000000;
+#Project_2 {
+    background-color: #88d4a3; 
+    color: #ffffff;
+}
+
+#Project_3 {
+    background-color: #b1d6be; 
+    color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {
@@ -89,7 +95,7 @@ body, html {
         height: auto;
         position: relative;
         align-items: center;
-        padding-top: 20px;
+        padding-top: 100px;
     }
 
     .main-content {
@@ -121,3 +127,67 @@ body, html {
     text-decoration: underline;
     text-decoration-color: #000000; 
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides .slide {
+    display: none; 
+    width: 100%;
+}
+
+.slides .active {
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+.slides img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.full-page-section {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slider {
+    width: calc(100% - 40px);
+    margin: auto; 
+}
+
+.main-content p, .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+    padding: 0 100px; 
+}
+
+.full-page-section p, .full-page-section h1, .full-page-section h2, .full-page-section h3, .full-page-section h4, .full-page-section h5, .full-page-section h6 {
+    padding: 0 100px; 
+
+    .mind-map-image {
+        width: 100px;       
+        height: 80px;    
+        border-radius: 0;  
+        object-fit: cover;    
+        margin-bottom: 20px; 
+        position: relative;
+        top: -20px
+        border: 1px solid #000; 
+    }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sammy Guo - HCI Portfolio</title>
+    <title>Sammy Guo - HCI Project 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,8 +13,9 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#writing">Writing</a></li>
+                <li><a href="#Project_1">Project 1</a></li>
+                <li><a href="#Project_2">Project 2</a></li>
+                <li><a href="#Project_3">Project 3</a></li>
             </ul>
         </nav>
     </div>
@@ -29,13 +30,45 @@
     <p>My passion lies in making technology accessible to all, with particular interests in product management, software development, and human-computer interaction design. I strive to blend innovative design with practical applications to meet diverse user needs.</p>
 </div>
         </section>
-        <section id="portfolio" class="full-page-section">
-            <h2>Portfolio</h2>
-            <p>Examples of work and projects that Sammy has completed.</p>
+        <section id="Project_1" class="full-page-section">
+            <h2>Project 1: Enhancing HKUST for Animal Students</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <h3>Project Description and Goals</h3>
+                        <p>In this innovative project, our aim is to adapt HKUST's campus to better accommodate students from the animal kingdom. Our goal is to reimagine a university environment that caters not just to human needs but also to those of various animal species, considering their unique forms, abilities, and lifestyles.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Learning and Execution Process</h3>
+                        <p>The project began with an intensive ideation phase where we merged insights related to potential user characteristics—such as physical form, abilities, language, and habits—and the challenges and needs these animal students might face. We brainstormed various attributes, including body shape, cultural background, environmental needs, and basic survival requirements. These discussions were expanded into detailed profiles for different animal categories. We then created a mind map to visually organize how each category correlates with specific campus adaptations.</p>
+                        <!-- <img src=mindmap1.jpeg alt="Mind Map" class="profile-image"> -->
+                        <img src=mindmap1.jpeg class="mind-map-image" alt="Mind Map">
+
+                    </div>
+                    <div class="slide">
+                        <h3>Personal Contributions and Achievements</h3>
+                        <p>As the team leader, I spearheaded the presentation of our findings and focused our efforts on crucial survival needs such as water and food accessibility. I led the design of adaptive solutions like water fountains suited for various animal forms and alternative food dispensing methods that diverge from the typical dining hall setup used by current students.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Personal Reflection</h3>
+                        <p>This project challenged us to integrate vastly different needs into a cohesive design strategy, which was particularly complex given the diverse nature of animal requirements. For instance, a camel's infrequent water needs starkly contrast with the constant aquatic environment a fish requires. If given the opportunity to refine our approach, I would advocate for a more precise definition of "animal" and suggest categorizing the animals more distinctly to tailor our solutions more effectively. This experience underscored the importance of precise target definition in research and design, highlighting that while a perfect solution may be elusive, clearer goals can lead to more practical outcomes.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>External Resources</h3>
+                        <p>AI was used to correct grammar.</p>
+                    </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
         </section>
-        <section id="writing" class="full-page-section">
-            <h2>Writing</h2>
-            <p>Insights and articles written by Sammy on topics in design and technology.</p>
+        <section id="Project_2" class="full-page-section">
+            <h2>Project 2</h2>
+            <p>Coming soon</p>
+        </section>
+        <section id="Project_3" class="full-page-section">
+            <h2>Project 3</h2>
+            <p>Coming soon</p>
         </section>
     </div>
 </body>
@@ -45,8 +78,9 @@
     <nav>
         <ul>
             <li><a href="#about" id="link-about">About</a></li>
-            <li><a href="#portfolio" id="link-portfolio">Portfolio</a></li>
-            <li><a href="#writing" id="link-writing">Writing</a></li>
+            <li><a href="#Project_1" id="link-Project_1">Project 1</a></li>
+            <li><a href="#Project_2" id="link-Project_2">Project 2</a></li>
+            <li><a href="#Project_3" id="link-Project_3">Project 3</a></li>
         </ul>
     </nav>
 </div>
@@ -72,4 +106,24 @@
         });
     });
     </script>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+    
+        document.querySelector('.prev').addEventListener('click', () => {
+            changeSlide(-1);
+        });
+    
+        document.querySelector('.next').addEventListener('click', () => {
+            changeSlide(1);
+        });
+    
+        function changeSlide(step) {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + step + totalSlides) % totalSlides;
+            slides[slideIndex].classList.add('active');
+        }
+    });
+    </script>
