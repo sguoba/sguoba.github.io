@@ -225,7 +225,7 @@ button.next2 {
     object-fit: cover;    
     margin-bottom: 0px; 
     top: -40px;  */
-    border: 0px solid #000; 
+    border: none;
 }
 
 .full-page-section {
