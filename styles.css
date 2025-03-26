@@ -128,9 +128,6 @@ html, body {
     text-decoration-color: #000000; 
 }
 
-/* ========================
-   SLIDESHOW 1 (Project_1)
-   ======================== */
 .slider {
     position: relative;
     width: 100%;
@@ -226,6 +223,16 @@ button.next2 {
     margin-bottom: 0px; 
     top: -40px;  */
     border: none;
+}
+
+.any-image{
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;   
+    /* margin: 1rem auto;  
+    width: 800px;       */
+    height: auto;     
+    border: none;  
 }
 
 .full-page-section {
