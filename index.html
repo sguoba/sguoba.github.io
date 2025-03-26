@@ -63,8 +63,84 @@
             </div>
         </section>
         <section id="Project_2" class="full-page-section">
-            <h2>Project 2</h2>
-            <p>Coming soon</p>
+            <h2>Project 2: Travel AI chatbot and voice</h2>
+            <div class="slider">
+                <div class="slides2">
+                    <!-- Slide 1 -->
+                    <div class="slide2 active">
+                        <h3>Project Description and Goals</h3>
+                        <p>
+                            We aimed to develop a voice agent/chatbot tailored to hospitality environments—such as hotels, restaurants, and theme parks—that would streamline information access for diverse and international students. As exchange students ourselves, we recognized the importance of a tool that could address language barriers, simplify unfamiliar payment methods, and offer quick, reliable information about local services. Our goal was to create a convenient, culturally adaptive solution that empowers users to confidently navigate new settings and fully embrace their travel experiences.
+                        </p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide2">
+                        <h3>Brainstorming</h3>
+                        <p>
+                            I led the brainstorming session using Miro, a virtual sticky-note platform, to explore and consolidate ideas that would be most relevant and beneficial for our project. Ultimately, we decided on developing a payment assistant. Below, you can see a snapshot of our brainstorming process.
+                        </p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide2">
+                        <h3>User Need Research</h3>
+                        <p>
+                            For our user needs research, I created an anonymous Google survey with 14 multiple-choice, select-all, and short-answer questions. We gathered responses from around 30 participants—surpassing our initial expectations. About 93% were between 18 and 24 years old, and 43% were from the United States, with the rest from various countries including Mexico, Canada, Europe, and Asia.
+
+Our main goal was to assess the current usage and adoption of different payment methods. We asked participants, “Are you familiar with any of the following payment systems?” and found that Apple Pay, Alipay, and WeChat Pay were the top choices. Additionally, 63% had used foreign local payment systems before, and over 60% indicated they were either “very likely” or “somewhat likely” to use them in the future.
+
+Participants identified several key challenges, including language barriers, difficulties in setting up accounts, and issues linking card payments. We leveraged these insights to shape our prototype and address the most pressing user pain points.
+                        </p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide2">
+                        <h3>Case Example</h3>
+                        <p>
+                        </p>
+                    </div>
+                     <!-- Slide 5 -->
+                    <div class="slide2">
+                        <h3>Storyboard</h3>
+                        <p>
+                        </p>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="slide2">
+                        <h3>Prototype</h3>
+                        <p>
+                        </p>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="slide2">
+                        <h3>User Testing and Reflections</h3>
+                        <p>
+                        </p>
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="slide2">
+                        <h3>Personal Contributions and Achievements</h3>
+                        <p>
+                            My personal contributions included leading the sticky‐note brainstorming session, developing and administering the anonymous user needs survey (including drafting, editing, and ensuring the questions remained unbiased), distributing and promoting the survey on WhatsApp, and analyzing the resulting data to form conclusions. I also conducted a classmate interview for the project video, preparing the interview questions and overseeing the interview process. I'm proud that as a team we collaborated with using our strengths such as Crystal with her storytelling, my research abilities (user needs) and intervewing skills, Wuzi's computational skills, and Freja's usability research skills. 
+                        </p>
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="slide2">
+                        <h3>Personal Reflection</h3>
+                        <p>
+                            Working as a team on this project was challenging in many ways. I realized the importance of clear communication to keep everyone updated on our progress and to coordinate different schedules. Ultimately, we had to work together as a cohesive unit. Our progress with the AI chatbot was especially rewarding—it became a meaningful and practical tool for me as an exchange student, helping me navigate new countries and unfamiliar local payment methods.
+                        </p>
+                    </div>
+                    <!-- Slide 10 -->
+                    <div class="slide2">
+                        <h3>External Resources</h3>
+                        <p>
+                            I utilized AI to refine and review questions, ensuring they maintain an unbiased tone.
+                        </p>
+                    </div>
+                </div>
+                <!-- Navigation Buttons -->
+                <button class="prev2">&#10094;</button>
+                <button class="next2">&#10095;</button>
+            </div>
         </section>
         <section id="Project_3" class="full-page-section">
             <h2>Project 3</h2>
@@ -127,3 +203,24 @@
         }
     });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slideIndex2 = 0;
+            const slides2 = document.querySelectorAll('.slide2');
+            const totalSlides2 = slides2.length;
+        
+            document.querySelector('.prev2').addEventListener('click', () => {
+                changeSlide2(-1);
+            });
+        
+            document.querySelector('.next2').addEventListener('click', () => {
+                changeSlide2(1);
+            });
+        
+            function changeSlide2(step) {
+                slides2[slideIndex2].classList.remove('active');
+                slideIndex2 = (slideIndex2 + step + totalSlides2) % totalSlides2;
+                slides2[slideIndex2].classList.add('active');
+            }
+        });
+        </script>

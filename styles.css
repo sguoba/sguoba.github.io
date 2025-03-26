@@ -1,9 +1,8 @@
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-    
 }
 
 .sidebar {
@@ -21,7 +20,8 @@ body, html {
     padding: 20px;
 }
 
-.sidebar h1, .sidebar nav ul li a {
+.sidebar h1,
+.sidebar nav ul li a {
     color: #000000;
 }
 
@@ -56,7 +56,6 @@ body, html {
     width: calc(100% - 250px); 
     display: flex;
     flex-direction: column;
-
 }
 
 .full-page-section {
@@ -108,6 +107,7 @@ body, html {
     }
 }
 
+/* Sidebar nav links */
 .sidebar nav ul li a {
     text-decoration: none; 
     font-size: 18px;
@@ -128,6 +128,9 @@ body, html {
     text-decoration-color: #000000; 
 }
 
+/* ========================
+   SLIDESHOW 1 (Project_1)
+   ======================== */
 .slider {
     position: relative;
     width: 100%;
@@ -139,11 +142,12 @@ body, html {
     width: 100%;
 }
 
-.slides .active {
+.slides .slide.active {
     display: block;
 }
 
-button.prev, button.next {
+button.prev,
+button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -153,14 +157,75 @@ button.prev, button.next {
     cursor: pointer;
 }
 
-button.prev { left: 10px; }
-button.next { right: 10px; }
+button.prev {
+    left: 10px;
+}
+button.next {
+    right: 10px;
+}
 
 .slides img {
     width: 100%; 
     height: auto; 
     display: block; 
     margin: 0 auto; 
+}
+
+.slides2 .slide2 {
+    display: none;  
+    width: 100%;
+}
+
+.slides2 .slide2.active {
+    display: block; 
+}
+
+button.prev2,
+button.next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev2 {
+    left: 10px;
+}
+button.next2 {
+    right: 10px;
+}
+
+.main-content p, 
+.main-content h1, 
+.main-content h2, 
+.main-content h3, 
+.main-content h4, 
+.main-content h5, 
+.main-content h6 {
+    padding: 0 100px; 
+}
+
+.full-page-section p, 
+.full-page-section h1, 
+.full-page-section h2, 
+.full-page-section h3, 
+.full-page-section h4, 
+.full-page-section h5, 
+.full-page-section h6 {
+    padding: 0 100px; 
+}
+
+.mind-map-image {
+    width: 100px;       
+    height: 80px;    
+    border-radius: 0;  
+    object-fit: cover;    
+    margin-bottom: 0px; 
+    top: -40px;  */
+    border: 0px solid #000; 
 }
 
 .full-page-section {
@@ -174,20 +239,10 @@ button.next { right: 10px; }
     margin: auto; 
 }
 
-.main-content p, .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-    padding: 0 100px; 
+.slides img {
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh; 
+    display: block;
+    margin: 0 auto;
 }
-
-.full-page-section p, .full-page-section h1, .full-page-section h2, .full-page-section h3, .full-page-section h4, .full-page-section h5, .full-page-section h6 {
-    padding: 0 100px; 
-
-    .mind-map-image {
-        width: 100px;       
-        height: 80px;    
-        border-radius: 0;  
-        object-fit: cover;    
-        margin-bottom: 20px; 
-        position: relative;
-        top: -20px
-        border: 1px solid #000; 
-    }
