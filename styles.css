@@ -130,9 +130,11 @@ html, body {
 
 .slider {
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
 }
+
 
 .slides .slide {
     display: none; 
@@ -252,4 +254,32 @@ button.next2 {
     max-height: 80vh; 
     display: block;
     margin: 0 auto;
+}
+
+.prev3, .next3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slides3 .slide3 {
+    display: none;
+    width: 100%;
+}
+
+.slides3 .slide3.active {
+    display: block;
+}
+
+.next3 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev3 {
+    left: 0;
 }

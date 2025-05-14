@@ -156,8 +156,56 @@ Participants identified several key challenges, including language barriers, dif
             </div>
         </section>
         <section id="Project_3" class="full-page-section">
-            <h2>Project 3</h2>
-            <p>Coming soon</p>
+<h2>Project 3: AR Tourism – Star Ferry Experience</h2>
+<div class="slider">
+    <div class="slides3">
+        <!-- Slide 1: Project Description -->
+        <div class="slide3 active">
+            <h3>Project Description and Goals</h3>
+            <p>
+                For our third HCI project, we focused on using Augmented Reality (AR) to enhance tourism experiences and foster a sense of community among travelers and local destinations. Our goal was to create a social XR application that could help tourists, especially those visiting historic sites with limited on-site information and gain cultural knowledge in an engaging and accessible way.
+            </p>
+        </div>
+
+        <!-- Slide 2: POV/User Needs -->
+        <div class="slide3">
+            <h3>Point of View and User Needs</h3>
+            <p>
+                We identified two user groups: (1) tourists visiting historic cities who need detailed attraction information despite under-resourced areas, and (2) exchange students traveling across Asia who want to experience more than their time allows. Both groups require a way to explore attractions efficiently and immersively. Our AR solution enables virtual exploration of iconic spots like the Star Ferry in Hong Kong.
+            </p>
+            <img src="project3_pov.png" class="any-image" alt="POV and Needs">
+        </div>
+
+        <!-- Slide 3: AR App Concept -->
+        <div class="slide3">
+            <h3>AR Tourism App – Star Ferry</h3>
+            <p>
+                Our AR app allows users to view a 3D model of the Star Ferry and learn key historical facts using a printed image as an AR marker. The test was conducted indoors with participant Anna, a tourist from Germany. She used the app to scan, interact with, and explore the ferry model.
+            </p>
+            <img src="project3_starferry.png" class="any-image" alt="Star Ferry AR Test">
+        </div>
+
+        <!-- Slide 4: User Testing and Feedback -->
+        <div class="slide3">
+            <h3>Participant Testing and Feedback</h3>
+            <p>
+                Our user testing showed strong engagement. Anna enjoyed scanning the marker and exploring the detailed 3D model. She tapped multiple historical info points and commented that she learned new facts. She rated the experience highly in ease of use, fun, visual quality, and educational value. Her feedback included a desire for added sound.
+            </p>
+        </div>
+
+        <!-- Slide 5: My Contributions and Reflection -->
+        <div class="slide3">
+            <h3>My Contributions and Reflection</h3>
+            <p>
+                I led the design of the user testing flow and analyzed Anna’s feedback. I also documented insights on user needs and contributed to defining our POVs for both tourists and students. This project showed me how AR can bridge cultural and informational gaps and gave me hands-on experience designing for immersion and accessibility. In future iterations, I would explore sound integration and voice-guided experiences for added realism.
+            </p>
+        </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <button class="prev3">&#10094;</button>
+    <button class="next3">&#10095;</button>
+</div>
+
         </section>
     </div>
 </body>
@@ -237,3 +285,25 @@ Participants identified several key challenges, including language barriers, dif
             }
         });
         </script>
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let slideIndex3 = 0;
+        const slides3 = document.querySelectorAll('.slide3');
+        const totalSlides3 = slides3.length;
+
+        document.querySelector('.prev3').addEventListener('click', () => {
+            changeSlide3(-1);
+        });
+
+        document.querySelector('.next3').addEventListener('click', () => {
+            changeSlide3(1);
+        });
+
+        function changeSlide3(step) {
+            slides3[slideIndex3].classList.remove('active');
+            slideIndex3 = (slideIndex3 + step + totalSlides3) % totalSlides3;
+            slides3[slideIndex3].classList.add('active');
+        }
+    });
+</script>
+
